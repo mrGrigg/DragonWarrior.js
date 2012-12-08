@@ -1,4 +1,4 @@
-define(['modules/Tiles', 'views/TileView'], function(Tiles, TileView) {
+define(['views/TileView'], function(TileView) {
     return Backbone.View.extend({
         id: 'palette'
 
