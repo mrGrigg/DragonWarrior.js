@@ -1,9 +1,9 @@
 define(function(require) {
     var view
         // , Tiles = require('modules/Tiles')
-        , TileView = require('modules/TileView');
+        , TileView = require('views/TileView');
 
-    view Backbone.View.extend({
+    view = Backbone.View.extend({
         id: 'palette'
 
         , initialize: function() {
