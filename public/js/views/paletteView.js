@@ -1,7 +1,6 @@
 define(['modules/Tiles', 'views/TileView'], function(Tiles, TileView) {
     return Backbone.View.extend({
-        tagName: 'div'
-        , id: 'palette'
+        id: 'palette'
 
         , initialize: function() {
 
