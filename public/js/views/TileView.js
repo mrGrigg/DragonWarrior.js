@@ -1,4 +1,4 @@
-define(['models/NodeModel'], function(Node) {
+define(function() {
     return Backbone.View.extend({
         className: 'paletteTile'
 
@@ -9,10 +9,10 @@ define(['models/NodeModel'], function(Node) {
         , initialize: function() {
             jQuery.event.props.push('dataTransfer');
 
-            this.model = new Node({
+            this.model = {
                 name: this.options.name,
                 data: this.options.data
-            });
+            };
 
             this.dnd = 'application/json';
         }
@@ -31,15 +31,15 @@ define(['models/NodeModel'], function(Node) {
             var image = document.createElement('img');
             image.height = 32;
             image.width = 32;
-            image.src = this.model.get('data');
-            image.title = this.model.get('name');
+            image.src = this.model.data;
+            image.title = this.model.name;
 
             return image;
         }
 
         , dragStart: function(event) {
             if (event.target instanceof(HTMLImageElement)) {       
-                var data = JSON.stringify(this.model.toJSON());
+                var data = JSON.stringify(this.model);
                 event.dataTransfer.setData(this.dnd, data);
                 event.dataTransfer.setDragImage(event.target, 0, 0);
             }
