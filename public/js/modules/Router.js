@@ -1,24 +1,24 @@
 define(['views/GameView', 'views/MapEditorView'], function(GameDemoView, MapEditorView) {
     return Backbone.Router.extend({
-        // initialize: function() {
-        //     //All routable views are registered in this view array
-        //     this.routeViews = {
-        //         GameDemoView: require('views/GameView')
-        //         , MapEditorView: require('views/MapEditorView')
-        //     };
-        // }
+        initialize: function() {
+            //All routable views are registered in this view array
+            this.routeViews = {
+                GameDemoView: require('views/GameView')
+                , MapEditorView: require('views/MapEditorView')
+            };
+        }
 
-        routes: {
+        , routes: {
             '': 'getDemoView',
             'editor': 'getEditorView'
         }
 
         , getDemoView: function() {
-            Backbone.Events.trigger('render:childView', GameDemoView);
+            Backbone.Events.trigger('render:childView', this.routeViews.GameDemoView);
         }
 
         , getEditorView: function() {
-            Backbone.Events.trigger('render:childView', MapEditorView);
+            Backbone.Events.trigger('render:childView', this.routeViews.MapEditorView);
         }
 
         // , getHomeView: function() {
