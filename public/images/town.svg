@@ -1,0 +1,22 @@
+<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+	<rect width="16" height="16"/>
+	<polygon fill="#BCBCBC" points="3,6 3,5 2,5 2,6 2,7 3,7 4,7 4,6 	"/>
+	<rect y="6" fill="#BCBCBC" width="1" height="1"/>
+	<rect x="2" y="12" fill="#BCBCBC" width="1" height="3"/>
+	<polygon fill="#BCBCBC" points="15,10 15,9 14,9 14,8 10,8 10,9 9,9 9,10 7,10 7,11 16,11 16,10 	"/>
+	<polygon fill="#BCBCBC" points="6,3 6,2 5,2 5,4 4,4 4,6 5,6 5,9 6,9 6,10 7,10 7,3 	"/>
+	<rect x="13" y="13" fill="#BCBCBC" width="1" height="2"/>
+	<polygon fill="#BCBCBC" points="15,6 15,5 14,5 14,8 15,8 15,9 16,9 16,6 	"/>
+	<rect x="10" y="1" fill="#BCBCBC" width="1" height="1"/>
+	<rect x="9" y="2" fill="#BCBCBC" width="3" height="1"/>
+	<rect x="8" y="3" fill="#BCBCBC" width="5" height="1"/>
+	<rect x="1" y="9" fill="#0070EC" width="1" height="2"/>
+	<rect x="9" y="5" fill="#0070EC" width="1" height="1"/>
+	<rect x="11" y="5" fill="#0070EC" width="1" height="1"/>
+	<rect x="11" y="13" fill="#0070EC" width="1" height="1"/>
+	<rect x="9" y="13" fill="#0070EC" width="1" height="1"/>
+	<path fill="#FFFFFF" d="M7,11v2v2h2h1h1h1h1v-2h2v2h1v-2v-2H7z M10,14H9v-1h1V14z M12,14h-1v-1h1V14z"/>
+	<path fill="#FFFFFF" d="M8,4v1v1v1v2h1V8h1V7h3V6V5V4H8z M10,6H9V5h1V6z M12,6h-1V5h1V6z"/>
+	<path fill="#FFFFFF" d="M5,10V9H4V8V7H3H2v1H1V7H0v1v1v1v1v1v1v1v1h1h1v-1v-1v-1h1h1v1v1v1h1h1v-1v-1v-1v-1v-1H5z M2,10v1H1v-1V9h1
+		V10z"/>
+</svg>

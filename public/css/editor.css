@@ -1,0 +1,41 @@
+#palette {
+    width:800px;
+    border:solid 1px #888;
+    margin:5px auto;    
+    padding:0;
+}
+
+#options {
+    width:800px;
+    margin:5px auto;        
+}
+
+#map {
+    margin:5px auto;
+    border:solid 1px #888;
+}
+
+.paletteTile {
+    margin:3px;
+    display:inline-block;
+}
+
+.mapNode {
+    width:32px;
+    height:32px;
+    float:left;
+}
+
+.mapNode.empty { 
+    width:30px;
+    height:30px;   
+    border:dotted 1px #ccc;
+}
+
+#mapCommands {
+    display:none;
+}
+
+#options a:hover {
+    text-decoration:underline;
+}

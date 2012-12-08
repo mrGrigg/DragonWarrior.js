@@ -1,0 +1,25 @@
+define(['modules/Tiles', 'views/TileView'], function(Tiles, TileView) {
+    return Backbone.View.extend({
+        tagName: 'div'
+        , id: 'palette'
+
+        , initialize: function() {
+
+        }
+
+        , render: function() {
+            _.each(Tiles, this.renderTile, this);
+
+            return this;
+        }
+
+        , renderTile: function(data, name) {
+            var tileView = new TileView({
+                data: data,
+                name: name
+            });
+
+            this.$el.append(tileView.render().el);
+        }
+    });
+});

@@ -1,0 +1,22 @@
+<svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+	<rect fill="#0070EC" width="16" height="16"/>
+	<g>
+		<polygon fill="#FFFFFF" points="3,5 3,4 4,4 4,5 5,5 6,5 6,4 5,4 5,3 4,3 3,3 2,3 2,4 1,4 1,5 2,5 		"/>
+		<rect x="9" y="2" fill="#FFFFFF" width="1" height="1"/>
+		<polygon fill="#FFFFFF" points="11,3 12,3 13,3 13,2 12,2 12,1 11,1 10,1 10,2 11,2 		"/>
+		<rect x="14" y="3" fill="#FFFFFF" width="1" height="1"/>
+		<rect x="12" y="5" fill="#FFFFFF" width="1" height="1"/>
+		<rect x="13" y="6" fill="#FFFFFF" width="1" height="1"/>
+		<rect x="11" y="6" fill="#FFFFFF" width="1" height="1"/>
+		<rect x="7" y="5" fill="#FFFFFF" width="1" height="1"/>
+		<rect x="6" y="11" fill="#FFFFFF" width="1" height="1"/>
+		<polygon fill="#FFFFFF" points="3,11 4,11 5,11 5,10 4,10 4,9 3,9 2,9 2,10 3,10 		"/>
+		<rect x="1" y="10" fill="#FFFFFF" width="1" height="1"/>
+		<rect x="3" y="14" fill="#FFFFFF" width="1" height="1"/>
+		<rect x="4" y="13" fill="#FFFFFF" width="1" height="1"/>
+		<rect x="5" y="14" fill="#FFFFFF" width="1" height="1"/>
+		<polygon fill="#FFFFFF" points="13,11 12,11 11,11 10,11 10,12 9,12 9,13 10,13 11,13 11,12 12,12 12,13 13,13 14,13 14,12 13,12 
+					"/>
+		<rect x="15" y="13" fill="#FFFFFF" width="1" height="1"/>
+	</g>
+</svg>
