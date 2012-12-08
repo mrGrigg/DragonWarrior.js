@@ -1,5 +1,9 @@
-define(['views/TileView'], function(TileView) {
-    return Backbone.View.extend({
+define(function(require) {
+    var view
+        // , Tiles = require('modules/Tiles')
+        , TileView = require('modules/TileView');
+
+    view Backbone.View.extend({
         id: 'palette'
 
         , initialize: function() {
@@ -7,18 +11,20 @@ define(['views/TileView'], function(TileView) {
         }
 
         , render: function() {
-            _.each(Tiles, this.renderTile, this);
+            // _.each(Tiles, this.renderTile, this);
 
-            return this;
+            // return this;
         }
 
         , renderTile: function(data, name) {
-            var tileView = new TileView({
-                data: data,
-                name: name
-            });
+            // var tileView = new TileView({
+            //     data: data,
+            //     name: name
+            // });
 
-            this.$el.append(tileView.render().el);
+            // this.$el.append(tileView.render().el);
         }
     });
+
+    return view;
 });

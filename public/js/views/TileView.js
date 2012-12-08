@@ -1,8 +1,6 @@
 define(['models/NodeModel'], function(Node) {
     return Backbone.View.extend({
-        tagName: 'div'
-
-        , className: 'paletteTile'
+        className: 'paletteTile'
 
         , events: {
             'dragstart': 'dragStart'

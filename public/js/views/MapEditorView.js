@@ -1,6 +1,8 @@
-define(['views/PaletteView', 'views/MapView'], function(Palette, Map) {
+define(function(require) {
     var view;
-
+        , Pallette - require('views/PaletteView')
+        , Map, require('views/MapView')
+        
     view = Backbone.View.extend({
         events: {
             'click .generateMap' : 'generateMap'
@@ -11,34 +13,34 @@ define(['views/PaletteView', 'views/MapView'], function(Palette, Map) {
         }
 
         , render: function() {
-            var options = this.template();
-            this.$el.html(options);
+            // var options = this.template();
+            // this.$el.html(options);
 
             return this;
         }
 
         , generateMap: function() {
-            var width = parseInt(this.$('.mapWidth').val(), 10);
-            var height = parseInt(this.$('.mapHeight').val(), 10);
+            // var width = parseInt(this.$('.mapWidth').val(), 10);
+            // var height = parseInt(this.$('.mapHeight').val(), 10);
 
-            if (_.isNaN(width) || _.isNaN(height)) return false;
+            // if (_.isNaN(width) || _.isNaN(height)) return false;
 
-            var map = new Map({
-                width: width,
-                height: height
-            });
+            // var map = new Map({
+            //     width: width,
+            //     height: height
+            // });
 
-            this.$('.newMapOptions').hide();
-            this.$('.mapCommands').show();
+            // this.$('.newMapOptions').hide();
+            // this.$('.mapCommands').show();
 
-            this.showPalette();
+            // this.showPalette();
 
-            this.$el.append(map.render().el);
+            // this.$el.append(map.render().el);
         }
 
         , showPalette: function() {
-            var palette = new Palette();
-            this.$el.append(palette.render().el);
+            // var palette = new Palette();
+            // this.$el.append(palette.render().el);
         }
 
         , template: _.template('<div class="options"> \
