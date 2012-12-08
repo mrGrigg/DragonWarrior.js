@@ -1,4 +1,4 @@
-define(['models/NodeModel'], function(Node) {
+define([], function() {
     return Backbone.View.extend({
         tagName: 'div'
         , className: 'mapNode empty'
@@ -10,10 +10,10 @@ define(['models/NodeModel'], function(Node) {
         }
 
         , initialize: function() {
-            this.model = new Node({
+            this.model = {
                 x: this.options.x,
                 y: this.options.y
-            });
+            );
 
             this.dnd = 'application/json';
         }
@@ -42,7 +42,7 @@ define(['models/NodeModel'], function(Node) {
             var data = event.dataTransfer.getData(this.dnd);
 
             //Add the new attributes to the node
-            this.model.set(JSON.parse(data));
+            this.model.data = JSON.parse(data)
 
             var image = this.createTileImage();
             this.$el.html(image);
@@ -53,8 +53,8 @@ define(['models/NodeModel'], function(Node) {
             var image = document.createElement('img');
             image.height = 32;
             image.width = 32;
-            image.src = this.model.get('data');
-            image.title = this.model.get('name');
+            image.src = this.model.data;
+            image.title = this.model.name;
 
             return image;
         }
