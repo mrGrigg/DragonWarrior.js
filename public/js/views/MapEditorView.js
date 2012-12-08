@@ -1,8 +1,8 @@
 define(function(require) {
-    var view;
+    var view
         , Pallette - require('views/PaletteView')
-        , Map, require('views/MapView')
-        
+        , Map, require('views/MapView');
+
     view = Backbone.View.extend({
         events: {
             'click .generateMap' : 'generateMap'
