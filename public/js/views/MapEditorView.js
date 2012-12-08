@@ -1,4 +1,4 @@
-define(['views/MapView'], function(Map) {
+define(['views/PaletteView', 'views/MapView'], function(Palette, Map) {
     var view;
 
     view = Backbone.View.extend({
