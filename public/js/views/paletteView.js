@@ -1,18 +1,25 @@
-define(function(require) {
-    var view;
-
-    view = Backbone.View.extend({
-        id: 'palette'
+define(['modules/Tiles', 'views/TileView'], function(Tiles, TileView) {
+    return Backbone.View.extend({
+        tagName: 'div'
+        , id: 'palette'
 
         , initialize: function() {
 
         }
 
         , render: function() {
+            _.each(Tiles, this.renderTile, this);
 
             return this;
         }
-    });
 
-    return view;
+        , renderTile: function(data, name) {
+            var tileView = new TileView({
+                data: data,
+                name: name
+            });
+
+            this.$el.append(tileView.render().el);
+        }
+    });
 });
