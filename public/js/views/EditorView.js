@@ -2,9 +2,7 @@ define(['views/PaletteView', 'views/MapView'], function(Palette, Map) {
     var view;
 
     view = Backbone.View.extend({
-        el: 'body'
-
-        , events: {
+        events: {
             'click .generateMap' : 'generateMap'
         }
 

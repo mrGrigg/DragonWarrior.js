@@ -1,4 +1,4 @@
-define(['views/GameView'], function(GameView) {
+define(function(require) {
     var view = Backbone.View.extend({
         el: 'body'
 
@@ -7,7 +7,6 @@ define(['views/GameView'], function(GameView) {
         }
 
         , render: function() {
-            this.renderChildView(GameView);
             return this;
         }
 
