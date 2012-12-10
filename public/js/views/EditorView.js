@@ -1,4 +1,4 @@
-define(['views/PaletteView', 'views/MapView'], function(Palette, Map) {
+define(['views/MapView'], function(Map) {
     var view;
 
     view = Backbone.View.extend({
@@ -39,8 +39,8 @@ define(['views/PaletteView', 'views/MapView'], function(Palette, Map) {
         }
 
         , showPalette: function() {
-            var palette = new Palette();
-            this.$el.append(palette.render().el);
+            // var palette = new Palette();
+            // this.$el.append(palette.render().el);
         }
 
         , template: _.template('<div class="options"> \
