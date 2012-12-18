@@ -1,77 +1,35 @@
 define([], function() {
-    return Backbone.Model.extend({
-        defaults: {
+    return function() {
+        var defaults = {
             step: 0
             , movementDirection: 'down'
             , x: 0 //x coordinate
             , y: 0 //y coordinate
             , xMovement: 0 // delta value for x-movement
             , yMovement: 0 // delta value for y-movement
-        }
+            , isMoving: false
+        };
 
-        // move: function(direction) {
-        //     //Player's current position
-        //     var newPosition = {
-        //         top: this.get('position').top,
-        //         left: this.get('position').left
-        //     };
+        var functions = {
+            xMove: function(value) {
+                this.isMoving = true;
 
-        //     switch (direction) {
-        //         case 'left':
-        //             newPosition.left = newPosition.left - 32;
-        //             break;
-        //         case 'up':
-        //             newPosition.top = newPosition.top - 32;
-        //             break;
-        //         case 'right':
-        //             newPosition.left = newPosition.left + 32;
-        //             break;
-        //         case 'down':
-        //             newPosition.top = newPosition.top + 32;
-        //             break;
-        //     }
+                this.xMovement = value;
+            }
 
-        //     if (this.maxPosition(newPosition)) {
-        //         this.set({position: newPosition});
-        //         Backbone.Events.trigger('player:move', this.get('position'));
-        //     }
-        //     else {
-        //         Backbone.Events.trigger('player:bump');
-        //     }
-        // },
+            , yMove: function(value) {
+                this.isMoving = true;
 
-        // step: function() {
-        //     //Alternate the step
-        //     var sprite = this.get('sprite');
-        //     this.set({ sprite: !sprite }, {silent: true});
+                this.yMovement = value;
+            }
 
-        //     //return the background coordinates
-        //     switch (this.get('direction')) {
-        //         case 'left':
-        //             return sprite ? '0 -33px' : '-32px -33px';
-        //         case 'up':
-        //             return sprite ? '-64px -33px' : '-96px -33px';
-        //         case 'right':
-        //             return sprite ? '-65px 0' : '-97px 0';
-        //         case 'down':
-        //             return sprite ? '0 0' : '-32px 0';
-        //     }
-        // },
+            , setMovement: function() {
+                
+            }
+        };
 
-        // maxPosition: function(position) {
-        //     var max = {
-        //         top: 0,
-        //         left: 0,
-        //         right: this.get('screen').width - 32,
-        //         bottom: this.get('screen').height - 32
-        //     };
+        _.extend(this, defaults, functions);
 
-        //     if (position.top < max.top) return false;
-        //     if (position.top > max.bottom) return false;
-        //     if (position.left < max.left) return false;
-        //     if (position.left > max.right) return false;
-
-        //     return true;
-        // }
-    });
+        return this;
+    };
 });

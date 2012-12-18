@@ -32,8 +32,8 @@ define(function(require) {
                 //this.fps = 1000/100; //~10 fps
                 this.frameRate = Math.round(this.fps);
 
-                var player = new Player();
-                this.player = player.toJSON();
+                this.player = new Player();
+                //this.player = player.toJSON();
                 //this.game = new GameLoop(this.player.toJSON(), this.loop);
             }
 
@@ -78,24 +78,28 @@ define(function(require) {
             //Events
             , move: function() {
                 if (this._pressed[this._left]) {
+                    this.player.xMove(-32);
                     this.player.xMovement = -32;
                     this.player.movementDirection = 'left';
                     // console.log('left');
                 }
 
                 if (this._pressed[this._up]) {
+                    this.player.yMove(-32);
                     this.player.yMovement = -32;
                     this.player.movementDirection = 'up';
                     // console.log('up');
                 }
 
                 if (this._pressed[this._right]) {
+                    this.player.xMove(32);
                     this.player.xMovement = 32;
                     this.player.movementDirection = 'right';
                     // console.log('right');
                 }
 
                 if (this._pressed[this._down]) {
+                    this.player.yMove(32);
                     this.player.yMovement = 32;
                     this.player.movementDirection = 'down';
                     // console.log('down');
