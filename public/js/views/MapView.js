@@ -1,9 +1,13 @@
-define(['views/NodeView'], function(NodeView) {
+define(['views/NodeView', 'models/NodeCollection'], function(NodeView, NodeCollection) {
     return Backbone.View.extend({
         tagName: 'div'
         , id: 'map'
 
         , initialize: function() {
+           // this.testMap = new TestMap();
+
+            Backbone.Events.on('node:create', this.addNode, this);
+
             this.width = this.options.width;
             this.height = this.options.height;
         }
@@ -56,5 +60,19 @@ define(['views/NodeView'], function(NodeView) {
 
             }, this);
         }
+
+        // , createColumnFunction: function(width) {
+        //     return function(y) {
+        //         var nodeArray[] = new Array(width);
+        //         for (var x = 0; x < width; x++) {
+
+        //         }
+        //     };
+        // }
+
+        , addNode: function(node) {
+            this.testMap.add(node);
+            //console.log(node);
+        }
     });
-})
+});

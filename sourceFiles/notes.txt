@@ -1,0 +1,27 @@
+dragon warrior text input and modals.
+    these are fun. someone. might already have one.
+
+Map creation:
+  The map is saved as a JSON store, the tile objects are like this:
+  node: {
+    x: 0
+    y: 0
+    tileName: 'water'
+    move: 0 || .5 || 1
+    damage: 0, 1, 2
+    action: {
+        search: 'itemId'
+        talk: 'dialogId'
+        stairs: 'zoneId'
+        auto: true //actions take place automatically
+    }
+    encounter: {
+        level: 2-5
+        monster: 'any' || 'golem' || ''
+        percentage: .25
+    }
+  }
+
+  ----------------------------------------------------------------
+  Data access
+  MongoDB data stores

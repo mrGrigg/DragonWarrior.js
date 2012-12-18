@@ -1,13 +1,15 @@
-define(['views/PaletteView', 'views/MapView'], function(Palette, Map) {
+define(['views/PaletteView', 'views/MapView', 'models/ExistingMaps'], function(Palette, Map, ExistingMaps) {
     var view;
 
     view = Backbone.View.extend({
         events: {
-            'click .generateMap' : 'generateMap'
+            'click .generateMap': 'generateMap'
+            , 'click .loadExisting': 'loadExistingMap'
         }
 
         , initialize: function() {
-
+            this.existingMaps = new ExistingMaps();
+            this.existingMaps.fetch();
         }
 
         , render: function() {
@@ -15,6 +17,19 @@ define(['views/PaletteView', 'views/MapView'], function(Palette, Map) {
             this.$el.html(options);
 
             return this;
+        }
+
+        , getMapList: function() {
+
+        }
+
+        , loadExistingMap: function() {
+            this.$el.append('<ul class="existing-maps"></ul>');
+            var names = this.existingMaps.get('mapNames');
+
+            _.each(names, function(name) {
+                this.$('.existing-maps').append(this.existingMapTemplate(name));
+            }, this);
         }
 
         , generateMap: function() {
@@ -41,13 +56,20 @@ define(['views/PaletteView', 'views/MapView'], function(Palette, Map) {
             this.$el.append(palette.render().el);
         }
 
+        , addTile: function(tile) {
+            this.testMap.add(tile);
+        }
+
         , template: _.template('<div class="options"> \
-                                                    <span class="newMapOptions"> \
-                                                        <input type="text" class="mapHeight" placeholder="Map height" /> \
-                                                        <input type="text" class="mapWidth" placeholder="Map width" /> \
-                                                        <button class="generateMap">Generate map</button> \
-                                                    </span> \
-                                                </div>')
+                                            <span class="newMapOptions"> \
+                                                <input type="text" class="mapHeight" placeholder="Map height" /> \
+                                                <input type="text" class="mapWidth" placeholder="Map width" /> \
+                                                <button class="generateMap">Generate map</button> \
+                                                <button class="loadExisting">Load existing map</button> \
+                                            </span> \
+                                        </div>')
+
+        , existingMapTemplate: _.template('<li><%= obj %></li>')
     });
     return view;
 });

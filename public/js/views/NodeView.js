@@ -47,6 +47,8 @@ define(['models/NodeModel'], function(Node) {
             var image = this.createTileImage();
             this.$el.html(image);
             this.$el.removeClass('empty');
+
+            Backbone.Events.trigger('node:create', this.model);
         }
 
         , createTileImage: function() {
