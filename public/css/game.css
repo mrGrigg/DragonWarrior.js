@@ -7,7 +7,7 @@
     background-size:32px;
 }
 
-.player {
+#player {
     width:32px;
     height:32px;
     position:relative;
@@ -17,6 +17,18 @@
     background-position:0 0;
     background-size:128px 64px;
 }
+
+#player.down-right { background-position: 0 0; }
+#player.down-left { background-position: -32px 0; }
+
+#player.left-right { background-position: 0 -33px; }
+#player.left-left { background-position: -32px -33px; }
+
+#player.right-right { background-position: -65px 0; }
+#player.right-left { background-position: -97px 0; }
+
+#player.up-right { background-position: -64px -33px; }
+#player.up-left { background-position: -96px -33px; }
 
 .map {
     margin:5px auto;
