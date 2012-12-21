@@ -1,4 +1,4 @@
-define(['models/MapModel'], function(Model) {
+define([], function() {
     var model = Backbone.Model.extend({
         //url: 'https://www.mongolab.com/api/1/databases/maps/collections/mapNames?apiKey=50c75bede4b07fb7d902856e'
         urlRoot: 'https://www.mongolab.com/api/1/databases/maps/collections/mapNames?apiKey=50c75bede4b07fb7d902856e'
