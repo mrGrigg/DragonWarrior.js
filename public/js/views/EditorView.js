@@ -4,7 +4,7 @@ define(['views/PaletteView', 'views/MapView', 'models/ExistingMaps'], function(P
     view = Backbone.View.extend({
         events: {
             'click .generateMap': 'generateMap'
-            , 'click .loadExisting': 'loadExistingMap'
+            // , 'click .loadExisting': 'loadExistingMap'
         }
 
         , initialize: function() {

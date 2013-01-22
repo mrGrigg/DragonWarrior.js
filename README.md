@@ -7,7 +7,9 @@ My goal is to keep a blog about my process, what I learn, and what I use. Since 
 
 ### Links
 [Blog](http://griggbot.com/)
+
 [Movement](http://dw.griggbot.com/)
+
 [Map Editor](http://dw.griggbot.com/editor)
 
 ### Reasoning
